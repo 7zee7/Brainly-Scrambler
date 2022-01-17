@@ -28,7 +28,21 @@ def thanks(token):
     data = '{"operationName":"ThankUser","variables":{"input":{"thankedUserDatabaseId":34626350}},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"9091b00f76659c6c76aeb7d6371f4f50d863e7ea2a69cd08c004cc2ce352b7e6"}}}'
     response = requests.post('https://brainly.co.id/graphql/id', headers=headers, cookies=cookies, data=data)
     print(response.text)
-    
+ def follow(token,34590756):
+
+    cookies = {'datadome': 'nvAnnuA9Ov9qRyjv-dg99xa_eW-O0lLjG59loLw.ZjbeZAoixKmSW9qDnZ-wIFOEYMw.9sr6S1FOLLRtA7g~SxpcbhveJ8A9DQRZVF2on4mPcHDrE1nazwTYWuQy8Hx',}
+
+    headers = {'Host': 'brainly.co.id','user-agent': 'Android-App 5.69.1','x-b-token-long': token,'accept': 'application/json'}
+
+    response = requests.put('https://brainly.co.id/api/28/api_users/follow/' + str(userid), headers=headers, cookies=cookies).text
+
+    if '"success":true' in response:
+
+    	print('[BOT] success follow the user')
+
+    else:
+
+    	print('Failed to follow user')   
 a = open('brainlybot.txt', 'r').read()
 
 for zz in range(0,1000):

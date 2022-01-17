@@ -9,7 +9,7 @@ def msoal(token):
     data = '{"attachments":[],"content":"<h1>puk U, OK I WILL LEAK MY SOURCE CODE TO SCRAMBLE BRAINLY DATABASE <br> my channel https://youtube.com/channel/UCSwqED8ekGUyVyDjiaWOv7Q<br>NT: i will stop if i given a role that can remove question","points":10,"subject_id":2}'
     response = requests.post('https://brainly.co.id/api/28/api_tasks/add', headers=headers, cookies=cookies, data=data).text
     if '"is_deleted":false' in response:
-    	print('[SOAL] Success Token: ' + token)
+    	print('[ini @7zee7 Nyoba nyoba aja :v ] Success Token: ' + token)
     else:
     	print('Failed')
     	
